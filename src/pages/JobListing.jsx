@@ -23,13 +23,14 @@ export const JobListing = () => {
   const [location, setLocation] = useState("");
   const [company_id, setCompany_id] = useState("");
   const { isLoaded } = useUser();
-  const { fn: fnCompanies, data: Companies = [] } = useFetch(getCompanies);
 
   const {
     fn: fnJobs,
     data: jobs,
     loading: loadingJobs,
   } = useFetch(getJobs, { location, searchQuery, company_id });
+
+  const { fn: fnCompanies, data: Companies = [] } = useFetch(getCompanies);
 
   useEffect(() => {
     if (isLoaded) fnCompanies();
