@@ -25,7 +25,7 @@ function CreateApplications() {
 
   return (
     <div className="flex flex-col gap-2">
-      {applications.map((application) => {
+      {applications?.map((application) => {
         return (
           <ApplicationCard
             key={application.id}
