@@ -141,7 +141,7 @@ export const JobListing = () => {
               );
             })
           ) : (
-            <div> No Jobs Found </div>
+            <div> No Jobs Found 😢</div>
           )}
         </div>
       )}
